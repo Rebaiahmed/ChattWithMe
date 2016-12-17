@@ -1,0 +1,102 @@
+
+
+  <ion-view title="Search Books">
+
+    <ion-nav-buttons side="left">
+
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+    </ion-nav-buttons>
+
+
+    <ion-floating-button click="openModal()" has-footer="false" button-color="#3f51b5" icon="ion-ios-bookmarks-outline" icon-color="#fff">
+    </ion-floating-button>
+    <ion-content has-header="true" padding="true">
+
+      <div class="padding">
+
+      </div>
+
+      <div class="padding">
+
+      </div>
+
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Search">
+      </label>
+
+      <h3>TuniBook</h3>
+
+
+
+
+      <div class="list">
+
+        <div class="item item-avatar"  ng-repeat="book in Books ">
+
+          <p ng-if="book.imageLinks.smallThumbnail">
+          <img ng-src="{{book.imageLinks.thumbnail }}" />
+          </p>
+          <p ng-if="!book.imageLinks.smallThumbnail">
+            <img ng-src="img/book.png" />
+          </p>
+          <h2> {{ book.Title }} </h2>
+          <p>Author <b>{{ book.Author.Name }} </b></p>
+
+
+          <div class="card-footer text-right">
+
+            <button class="button-positive"  ng-click="StarBook(book)">Star</button>
+            <button class="button-positive" ng-click="addToFavorites(book)">Add to Favorite</button>
+            <i class="icon ion-chatbubbles positive"></i><span >6</span>
+
+            <i class="icon ion-heart assertive"></i> <span >23</span>
+            <div class="pull-left">
+              <i class="icon ion-clock"></i> published at : {{ book.created_at | date }}
+            </div>
+            <br>
+            <div class="pull-left">
+
+              <i class="icon ion-clock"></i> Added By : <a ui-sref="books.user({uid:  book.by_user.uid  })">{{ book.by_user.displayName }} </a>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ion-content>
+
+    <div class="tabs tabs-icon-only">
+      <a nav-clear class="tab-item disable-user-behavior active" title="Home" nav-clear ui-sref="books.home">
+        <i class="icon ion-home"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+      </a>
+      <a nav-clear class="tab-item disable-user-behavior" title="Chat" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="books.messages">
+        <i class="icon ion-chatbubbles"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+      </a>
+      <a nav-clear class="tab-item disable-user-behavior" title="Drink" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="books.notifications">
+        <i class="icon ion-android-notifications"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+      </a>
+    </div>
+  </ion-view>
+

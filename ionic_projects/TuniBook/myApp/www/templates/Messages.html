@@ -1,0 +1,47 @@
+
+  <ion-view title="Messages">
+
+    <ion-nav-buttons side="left">
+
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+    </ion-nav-buttons>
+
+
+
+    <ion-content has-header="true" padding="true">
+
+      <h3>Messages list</h3>
+      <div class="list">
+
+        <a class="item item-avatar" ui-sref="books.message_single({id: 'id','uid':'KXbmpUPlNDQE8ADohZr'})">
+          <img src="https://pbs.twimg.com/profile_images/675670835915440128/wrh-cAjE.jpg" />
+          <h2>Mortadha fadhlaoui</h2>
+          <p>Bonsoir j'ai une demande d'echange du livre</p>
+        </a>
+      </div>
+
+
+      <ion-list>
+        <ion-item ng-repeat="message in messages">
+          {{message.message}}
+        </ion-item>
+      </ion-list>
+
+    </ion-content>
+
+    <div class="tabs tabs-icon-only">
+      <a nav-clear class="tab-item disable-user-behavior" title="Home" nav-clear ui-sref="books.home">
+        <i class="icon ion-home"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+      </a>
+      <a nav-clear class="tab-item disable-user-behavior" title="Chat" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="books.messages">
+        <i class="icon ion-chatbubbles"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+      </a>
+      <a nav-clear class="tab-item disable-user-behavior active" title="Drink" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="books.notifications">
+        <i class="icon ion-android-notifications"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+      </a>
+    </div>
+
+
+  </ion-view>
+omato juice, habanero, aquavit and Lea & Perrins Worcestershire Sauce

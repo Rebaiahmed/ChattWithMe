@@ -1,0 +1,68 @@
+
+<ion-view title="Snd - Drink list">
+
+  <ion-nav-buttons side="left">
+
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+  </ion-nav-buttons>
+
+
+
+  <ion-content has-header="true" padding="true" >
+    <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+      <div class="content">
+        <div class="avatar" style="background-image: url('img/daenerys.jpg');"></div>
+        <h3><a class="light">Daenerys Targaryen</a></h3>
+        <h4>dragon_mommy</h4>
+      </div>
+    </div>
+    <div class="tabs tabs-dark tabs-icon-top static">
+      <a ui-sref="app.activity" class="tab-item">
+        <i class="icon ion-arrow-graph-up-right"></i> Activity
+      </a>
+      <a ui-sref="app.friends" class="tab-item">
+        <i class="icon ion-android-people"></i> Modify Profile
+      </a>
+      <a ui-sref="app.gallery" class="tab-item">
+        <i class="icon ion-images"></i> Books
+      </a>
+    </div>
+    <h4 class="content padding double-padding-x">Following</h4>
+    <div class="list animate-fade-slide-in-right">
+      <a ui-sref="app.friends" class="item item-avatar item-icon-right">
+        <img src="img/jon-snow.jpg">
+        <h2>Jon Snow</h2>
+        <p>Da illest illegitimate</p>
+        <i class="icon ion-chatbubble muted"></i>
+      </a>
+      <a ui-sref="app.friends" class="item item-avatar item-icon-right">
+        <img src="img/sansa.jpg">
+        <h2>Sansa Stark</h2>
+        <p>&amp; Joffrey <strike>sitting</strike> sat in a tree</p>
+        <i class="icon ion-chatbubble muted"></i>
+      </a>
+      <a ui-sref="app.friends" class="item item-avatar item-icon-right">
+        <img src="img/tyrion.jpg">
+        <h2>Tyrion Lannister</h2>
+        <p>B.A.M.F. imp</p>
+        <i class="icon ion-chatbubble muted"></i>
+      </a>
+    </div>
+  </ion-content>
+
+  <div class="tabs tabs-icon-only">
+    <a nav-clear class="tab-item disable-user-behavior" title="Home" nav-clear ui-sref="books.home">
+      <i class="icon ion-home"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+    </a>
+    <a nav-clear class="tab-item disable-user-behavior" title="Chat" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="books.messages">
+      <i class="icon ion-chatbubbles"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+    </a>
+    <a nav-clear class="tab-item disable-user-behavior active" title="Drink" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="books.notifications">
+      <i class="icon ion-android-notifications"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+    </a>
+  </div>
+
+
+</ion-view>
+

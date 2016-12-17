@@ -1,0 +1,60 @@
+
+<ion-view title="Foulen Ben Foulen">
+
+  <ion-nav-buttons side="left">
+
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+  </ion-nav-buttons>
+
+  <ion-floating-button click="goChat()" has-footer="false" button-color="#3f51b5" icon="ion-chatbubble-working" icon-color="#fff">
+  </ion-floating-button>
+
+  <ion-content padding="true">
+    <div class="hero slide-up" style="background-image: url('../img/profile_cover.jpeg');">
+      <div class="content">
+        <div class="avatar" style="background-image: url('../img/avatar.png');"></div>
+        <h3><a class="light">{{  userProfile.username}}</a></h3>
+
+
+      </div>
+    </div>
+    <div class="tabs tabs-dark tabs-icon-top static">
+      <a ui-sref="app.activity" class="tab-item">
+        <i class="icon ion-arrow-graph-up-right"></i> Books
+      </a>
+      <a ui-sref="app.friends" class="tab-item">
+        <i class="icon ion-android-people"></i> Followers
+      </a>
+      <a ui-sref="app.gallery" class="tab-item">
+        <i class="icon ion-images"></i> Following
+      </a>
+    </div>
+    <h4 class="content padding double-padding-x">Books</h4>
+
+
+<div class="row">
+  <button class="button-positive" ng-click="FollowUser()">Follow</button>
+
+</div>
+
+
+
+
+  </ion-content>
+
+  <div class="tabs tabs-icon-only">
+    <a nav-clear class="tab-item disable-user-behavior" title="Home" nav-clear ui-sref="books.home">
+      <i class="icon ion-home"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+    </a>
+    <a nav-clear class="tab-item disable-user-behavior" title="Chat" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="books.messages">
+      <i class="icon ion-chatbubbles"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+    </a>
+    <a nav-clear class="tab-item disable-user-behavior active" title="Drink" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="books.notifications">
+      <i class="icon ion-android-notifications"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+    </a>
+  </div>
+
+
+</ion-view>
+

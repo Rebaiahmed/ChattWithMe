@@ -1,0 +1,67 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Add Book <i class="icon ion-ios-book-outline"></i></h1>
+  </ion-header-bar>
+  <ion-content>
+
+
+<form name="FormBook" novalidate ng-submit="addBook(FormBook.$valid)">
+
+  <div class="row">
+    <label class="item item-input">
+      <span class="input-label"><b>ISBN</b></span>
+      <input type="tel" id="isbn" ng-model="search.isbn" ng-pattern="/^[0-9]{10,13}$/" required  ng-minlength="10"
+             ng-maxlength="13" name="isbn">
+    </label>
+
+    <div class="row">
+    <p ng-show="FormBook.isbn.$invalid && submit" class="bar-assertive">ISBN invalid</p>
+    </div>
+  </div>
+
+    <div class="row">
+      <label class="item item-input">
+        <span class="input-label"><b>Title</b></span>
+        <input type="text" id="title" ng-model="search.title"  ng-minlength="3" name="title">
+
+      </label>
+    </div>
+
+
+
+
+
+
+
+    <div class="row">
+
+      <div class="col-40">
+
+      </div>
+
+      <div class="col-40">
+        <button class="button button-positive">
+          Search
+        </button>
+      </div>
+
+      <div class="col-40">
+
+      </div>
+
+
+    </div>
+</form>
+
+
+
+    <div class="bar  bar-assertive">
+      <h3 class="title">Sorry we didn't Find This Book</h3>
+    </div>
+
+  </ion-content>
+
+
+
+
+</ion-modal-view>
